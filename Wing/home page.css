@@ -1,0 +1,395 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-03-05 15:49:44
+ * @version $Id$
+ */
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0} 
+body{font:12px"微软雅黑","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;} 
+a{color:#2d374b;text-decoration:none} 
+a:hover{color:#cd0200;text-decoration:underline} 
+em{font-style:normal} 
+li{list-style:none} 
+img{border:0;vertical-align:middle} 
+table{border-collapse:collapse;border-spacing:0} 
+p{word-wrap:break-word} 
+
+.container {
+	width: 1280px;
+	margin: 0 auto;
+}
+
+.bg_pic {
+	width: 1280px;
+	height: 733px;
+	overflow: hidden;
+	background: #222;
+	position: relative;
+}
+.bg_pic .logo {
+	color: #fff;
+	font-size: 22px;
+	position: absolute;
+	z-index: 3000;
+	top: 20px;
+	left: 190px;
+}
+.bg_pic .nav {
+	width: 840px;
+	font-size: 12px;
+	color: #fff;
+	position: absolute;
+	z-index: 3000;
+	top: 40px;
+	left: 690px;
+}
+.bg_pic .nav li {
+	float: left;
+}
+.bg_pic .nav a {
+	font-size: 12px;
+	color: #fff;
+	margin: 0 6px;
+}
+.bg_pic .creatively {
+	color: #fff;
+	font-size: 42px;
+	font-weight: bold;
+	position: absolute;
+	z-index: 3000;
+	top: 316px;
+	left: 200px;
+}
+.bg_pic .professional {
+	color: #fff;
+	font-size: 26px;
+	position: absolute;
+	z-index: 3000;
+	top: 370px;
+	left: 224px;
+}
+.bg_pic .content01 {
+	color: #fff;
+	font-size: 20px;
+	position: absolute;
+	z-index: 3000;
+	top: 320px;
+	left: 700px;
+}
+.bg_pic .line {
+	width: 50px;
+	border-top: 1px solid #fff;
+	position: absolute;
+	z-index: 3000;
+	top: 428px;
+	left: 872px;
+}
+.bg_pic .seeworks {
+	width: 200px;
+	height: 40px;
+	text-align: center;
+	border: 1px solid #fff;
+	position: absolute;
+	z-index: 3000;
+	top: 462px;
+	left: 797px;
+}
+.bg_pic .seeworks a {
+	display: block;
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	color: #fff;
+}
+.bg_pic .seeworks a:hover {
+	text-decoration: none;
+}
+.bg_pic .pics li img{
+	width: 1280px;
+	height: 733px;
+}
+
+.bg_pic .pics li{
+	width: 1280px;
+	height: 733px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	background: #222;
+}
+
+.bg_pic .prev {
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	top: 337px;
+	left: 60px;
+	z-index: 3000;
+	cursor: pointer;
+}
+
+.bg_pic .next {
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	top: 337px;
+	left: 1160px;
+	z-index: 3000;
+	cursor: pointer;
+}
+.bg_pic  .prev img, .bg_pic  .next img {
+	width: 60px;
+	height: 60px;
+}
+.pic_content {
+	width: 1280px;
+	height: 500px;
+	position: relative;
+}
+.pic_content .Lpic {
+	width: 640px;
+	height: 500px;
+	float: left;
+}
+.pic_content .maskLayer {
+	width: 640px;
+	height: 500px;
+	background: #9d9d9d;
+	left: 0;
+	top: 0;
+	position: absolute;
+	z-index: 1;
+	filter: alpha(opacity=0);
+	opacity: 0;
+}
+.pic_content .Lpic img{
+	width: 640px;
+	height: 500px;
+}
+.pic_content .Rcontent {
+	width:640px;
+	height: 500px;
+	text-align: center;
+	float: left;
+}
+.pic_content .Rcontent h2 {
+	margin-top: 100px;
+	font-size: 24px;
+}
+.pic_content .Rcontent p{
+	margin-top: 30px;
+}
+.pic_content .Rcontent p span {
+	display: block;
+	line-height: 10px;
+}
+.pic_content .Rcontent .line {
+	width: 50px;
+	margin: 20px auto;
+	border-top: 1px solid #000;
+}
+.pic_content .Rcontent .readmore {
+	width: 200px;
+	height: 40px;
+	border: 1px solid #000;
+	text-align: center;
+	margin: 0 auto;
+}
+.pic_content .Rcontent .readmore a {
+	width: 200px;
+	height: 40px;
+	display: block;
+	line-height: 40px;
+	font-size: 16px;
+	color: #000;
+}
+.pic_content .Rcontent .readmore a:hover {
+	text-decoration: none;
+}
+.pic_cpts {
+	width: 1280px;
+	background: #f2f2f2;
+	padding: 50px 0 50px 0;
+}
+.pic_cpts .head {
+	width: 1280px;
+	background: #f2f2f2;
+}
+.pic_cpts .title {
+	font-size: 24px;
+	width: 1280px;
+	text-align: center;
+}
+.pic_cpts .line {
+	width: 50px;
+	border-top: 1px solid #000;
+	margin: 26px auto;
+}
+.pic_cpts .head ul {
+	width: 130px;
+	height: 12px;
+	margin: 0 auto;
+	position: relative;
+}
+.pic_cpts .head li {
+	float: left;
+	display: block;
+	width: 10px;
+	height: 10px;
+	margin: 0 10px;
+	border: 1px solid #828282;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.pic_cpts .head .active {
+	background: #828282;
+}
+.pic_cpts .pictures {
+	position: relative;
+	width: 1280px;
+	height: 552px;
+}
+.pic_cpts .pictures img{
+	width: 1280px;
+	height: 552px;
+}
+.pic_cpts .pictures li {
+	width: 1280px;
+	height: 552px;
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	left: 0;
+}
+.pic_cpts .seeallworks {
+	width: 200px;
+	height: 40px;
+	border: 1px solid #000;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+.pic_cpts .seeallworks a {
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	display: block;
+	font-size: 16px;
+	color: #000;
+	text-align: center;
+}
+.pic_cpts .seeallworks a:hover {
+	text-decoration: none;
+}
+.cform {
+	width: 1280px;
+	background: #2a63c1;
+	padding-top: 60px;
+	position: relative;
+}
+.cform .title {
+	color: #fff;
+	font-size: 26px;
+	text-align: center;
+}
+.cform .line {
+	width: 50px;
+	border-top: 1px solid #fff;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+.cform .form1{
+	width: 1280px;
+	margin-top: 60px;
+}
+.cform .email {
+	border: 1px solid #fff;
+	width: 426px;
+	height: 50px;
+	color: #fff;
+	margin-left: 427px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 18px;
+	background: #2a63c1
+}
+.cform .subBtn{
+	border: 1px solid #fff;
+	border-top: 0;
+	font-size: 20px;
+	width: 428px;
+	height: 50px;
+	margin-left: 427px;
+	background: #204b93;
+	color: #fff;
+	cursor: pointer;
+}
+.cform .logo {
+	color: #fff;
+	text-align: center;
+	font-size: 22px;
+	margin-top: 72px;
+}
+.cform .share {
+	width: 326px;
+	height: 30px;
+	margin: 0 auto;
+	padding: 72px 0 72px 0;
+}
+.cform .share li {
+	width: 40px;
+	height: 40px;
+	margin: 0 12px 0 12px;
+	line-height: 40px;
+	text-align: center;
+	float: left;
+}
+.cform .share li:hover {
+	width: 38px;
+	border: 1px solid #fff;
+	border-radius: 20px;
+}
+.cform .share li:hover img{
+	width: 20px;
+}
+.cform .share img {
+	width: 22px;
+	height: 22px;
+}
+.cfooter {
+	width: 1280px;
+	height: 100px;
+	background: #373c44;
+}
+.cfooter .ulul {
+	width: 470px;
+	height: 100px;
+	float: left;
+	line-height: 100px;
+	padding-left: 170px;
+}
+.cfooter .ulul li {
+	float: left;
+	color: #9b9ea2;
+}
+.cfooter .ulul a {
+	color: #9b9ea2;
+	margin: 0 8px;
+}
+div.cfooter .contact {
+	width: 640px;
+	float: right;
+	height: 100px;
+	line-height: 100px;
+}
+div.cfooter .contact ul {
+	color: #9b9ea2;
+	padding-left: 170px;
+} 
+div.cfooter .contact ul li {
+	margin: 0 20px;
+	float: left;
+}
