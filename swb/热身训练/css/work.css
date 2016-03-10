@@ -1,0 +1,317 @@
+body{
+	text-align:center;
+	width: 1280px;
+	margin: 0 auto;
+}
+
+*{
+	font-family: "Microsoft Yahei";
+	margin: 0px;
+	padding: 0px;/*避免不同浏览器对标签的解释不同造成的兼容性问题*/
+}
+
+.head{
+	background-color:#373c44;
+    height: 100px;
+    margin:0 auto;
+}
+
+.logo{
+	font-size:30px;
+	color:#ffffff;
+	margin-left:15.6%;
+	padding-top: 21px;
+	float: left;
+}
+
+.navigation{   
+	margin-right: 15.6%;
+	float: right;
+	overflow: hidden;
+}
+
+          .navigation ul{
+          	overflow: hidden;
+          }
+
+                       .navigation ul li{
+                       	 list-style-type: none;
+                       	 color:white;
+                         margin:0px 5px;
+                         float:left;
+                         height: 100px;
+                         line-height:100px;
+                        }
+
+           .navigation a{
+          	text-decoration:none;
+          	color:white;
+          	font-size: 12px;
+           }
+
+           .navigation a:hover{
+               color:#989794;
+           }  
+
+.ourWork{
+	width: 100%;
+	background-color: white;
+	margin:0 auto;
+
+}
+
+.blockTitle{
+	color:#3c2839;
+	font-size:30px;	
+	margin:0 auto;
+    padding-top:100px; 
+}
+
+.line{
+	border-top:solid 1px #626262;
+	width: 50px;
+	margin:0 auto;
+	margin-top:48px; 
+}
+
+.workClass{
+	font-size: 13px;
+	margin:0px 170px;
+	margin-top: 75px;
+	overflow: hidden;/*父级div清除浮动*/
+}
+
+/*公共类可用于统一设置样式*/
+          .workClass .clearfix{	
+	          float: left;
+	          width: 14.286%;
+	          height: 40px;
+	          line-height:40px;
+	      }
+
+/*让<a>元素变为块状元素，便于设置其充满父级div*/
+                    .workClass .clearfix a{
+                    	text-decoration: none;
+                        display: block;
+	                    width: 100%;
+	                    height: 100%;
+	                }
+	      .workClass a:hover{
+	           color: #626262; 
+	      }
+
+	                
+.all a{
+	color: #626262; 
+	background-color:#eaeaea;
+
+
+}
+
+.mobleApps a{
+	color: #ffffff; 
+	background-color:#00c59e;
+}
+
+.webDevelopment a{
+	color: #ffffff; 
+	background-color:#df4343;
+}
+
+.identity a{
+	color: #ffffff; 
+	background-color:#64b341;
+}
+
+.brandPromo a{
+	color: #ffffff; 
+	background-color:#874ab6;
+}
+
+.graphicDesign a{
+	color: #ffffff; 
+	background-color:#ffa200;
+}
+
+.motionDynamics a{
+	color: #ffffff; 
+	background-color:#2f84e5;
+}
+
+.contents{   
+	margin-left:170px;
+	margin-top: 69px;
+	overflow: hidden;/*父级div清除浮动*/
+}
+   
+         .contents ul{              	
+             overflow: hidden;
+          }
+
+                    .contents ul li{
+                       list-style-type: none;
+                       float: left;
+                       width: 300px;
+                       margin-right: 20px; 
+                    }
+
+          .contents a{
+              display: inline-block;
+              text-decoration: none;
+              color:#060606;
+              font-size: 15px;
+              line-height: 65px; 
+          } 
+
+          .contents a:hover{
+              color: #ff0000;
+          }
+
+          .contents img{
+              width: 300px;
+              height: 215px;
+          } 
+
+.testImonials{
+	background-color: #ffffff;
+}
+
+.quoteButton{
+	margin-top:22px;
+	background-color: #00c59e;
+	font-size: 30px;
+	height: 100px;
+	color: #ffffff;
+	line-height: 100px;
+}             
+
+.text{
+	margin: 0px auto;
+	margin-top:106px;
+	width: 900px;
+}
+
+  p.text1{
+    vertical-align: top;
+    font-size: 15px;
+    color:#626262;
+    margin-bottom: 106px;
+  }
+
+  p.text2{
+	font-size:15px;
+	color:000000;
+  }
+
+.subScribe{
+	background-color: #2a63c1;
+	margin-top: 158px;
+
+}
+
+.texts{
+  width:480px;
+  height: 68px;
+  background-color:#2a63c1; 
+  margin-top:60px; 
+  margin-bottom:-2px; 
+  border:2px solid #ffffff;
+  text-align:center;
+  color:#6a92d4 ; 
+  font-size: 26px;
+}
+
+.submit{
+  width:484px;
+  height:72px;
+  background-color:#204b93;
+  border:2px solid #ffffff;
+  text-align:center;
+  color:#ffffff ; 
+  font-size: 26px; 
+}
+
+/*复用blockTitle的样式，不同的加以覆盖*/
+.son{
+	border-color: #ffffff;
+	color: #ffffff;
+}
+
+/*引用阿里巴巴字符库*/
+
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot'); /* IE9*/
+  src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot'); /* IE9*/
+  src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-facebook:before { content: "\e602"; }
+.icon-pinterest:before { content: "\e603"; }
+.icon-popskype:before { content: "\e605"; }
+.icon-twitter:before { content: "\e601"; }
+.icon-in:before { content: "\e604"; }
+.icon-socialfacebookoutline:before { content: "\e600"; }
+
+/*引用阿里巴巴字符库*/
+
+.icon{
+ margin-top:80px;
+ padding-bottom: 56px;
+}
+
+    .icon ul{
+    	width: 33.3%;
+    	margin: 0px auto;
+        overflow: hidden;
+     }
+            .icon ul li{
+                list-style-type: none;
+                float: left;
+                margin:0px 28.5px;
+            }
+
+   .icon a{
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 28px;
+    }
+
+    .icon a:hover{
+       color:#989794;
+     }
+
+/*复用<div class"head">*/
+.x{ 
+    margin-right: 0px;  
+	margin-left: 15.6%;
+	float: left;
+	overflow: hidden;
+}
+
+     .x ul li{
+         float:right;
+
+      }
+
+     .y ul li{
+       margin-left:30px;
+      }
