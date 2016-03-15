@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>title</title>
+<style>
+*{margin: 0;padding: 0;}
+ul{margin: 100px auto;width: 200px;height: 200px;}
+li{list-style:none;width:200px;height:200px;position:relative;overflow:hidden;}
+div{background: orange;width:200px;height: 200px;}
+span{position:absolute;top:0;left:-200px;width:100%;height:100%;background:lightgreen;}
+</style>
+</head>
+<body>
+	<ul>
+		<li>
+			<div></div><span></span>
+		</li>
+	</ul>
+</body>
+<script>
+var oUl = document.querySelector('ul');
+var oLi =oUl.children[0];
+var oSpan = oUl.querySelector('span');
+oLi.onmouseenter = function(ev){
+	var oEvent = ev||event;
+	var q=getMousePos(this,oEvent);
+	switch(q){
+		case 0:
+			oSpan.style.left = '200px';
+			oSpan.style.top='0';			
+		break;
+		case 1:
+			oSpan.style.left='0'
+			oSpan.style.top = '200px';			
+		break;
+		case 2:
+			oSpan.style.left = '-200px';
+			oSpan.style.top='0';		
+		break;
+		case 3:
+			oSpan.style.left='0'
+			oSpan.style.top= '-200px';		
+		break;
+	}
+	move(oSpan,{left:0,top:0})
+};
+oLi.onmouseleave = function(ev){
+	var oEvent = ev||event;
+	var q=getMousePos(this,oEvent);
+	switch(q){
+		case 0:
+			move(oSpan,{left:200,top:0})
+		break;
+		case 1:
+			move(oSpan,{left:0,top:200})
+		break;
+		case 2:
+			move(oSpan,{left:-200,top:0})
+		break;
+		case 3:
+			move(oSpan,{left:0,top:-200})
+		break;
+	}
+}
+
+function getMousePos(obj,ev){
+	var w = obj.offsetWidth;
+	var h = obj.offsetHeight;
+	var x = obj.offsetLeft+w/2-ev.pageX;
+	var y = obj.offsetTop+h/2-ev.pageY;
+	return Math.round((Math.atan2(y,x)*180/Math.PI+180)/90)%4;
+};
+function move(obj,json){
+	var start={};
+	var dis={};
+	for(var name in json){
+		start[name]=parseFloat(getComputedStyle(obj,false)[name]);//这一行赋值后面是什么意思//拿出top
+		switch(name){
+			case 'left':
+				start[name]=obj.offsetLeft;
+			break;
+			case 'top':
+				start[name]=obj.offsetTop;
+			break;
+		}	
+		dis[name]=json[name]-start[name];
+	}
+	var count = Math.round(300/(1000/30));
+	var n=0;
+	clearInterval(obj.timer);
+	obj.timer=setInterval(function(){
+		n++;
+		for(var name in json){
+			var a=n/count;
+			var cur = start[name]+dis[name]*a;
+			obj.style[name]=cur+'px';
+		}
+		if(n==count){
+			clearInterval(obj.timer);
+		}
+	},1000/30)
+}
+
+var str='abc-my-code';
+alert(str.split('m'));
+</script>
+</html>
+
+<!-- 作者：徐哲
+链接：http://www.zhihu.com/question/30303733/answer/47763422
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 -->
