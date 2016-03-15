@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>test</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link href="" rel="stylesheet">
+	<style type="text/css">
+		ul {
+			height: 150px;
+			margin: 30px 200px;
+			list-style: none;
+		}	
+		ul li{
+			width: 100px;
+			height: 150px;
+			float: left;
+			overflow: hidden;
+			background: green;
+			margin: 0 20px;
+			position: relative;
+		}
+		ul a{
+			width: 100px;
+			height: 150px;
+			background: #ccc;
+			display: block;
+			opacity: 0;
+			filter: alpha(opacity: 0);
+			position: absolute;
+			z-index: 3000;
+			top: 0;
+			left: 0;
+		}
+		ul div{
+			width: 100px;
+			height: 150px;
+			position: absolute;
+			z-index: 2000;
+			top: 0;
+			left: 100px;
+		}
+		ul img{
+			width: 100px;
+			height: 150px;
+		}
+	</style>
+	<script type="text/javascript">
+
+		//获取元素style
+		function getStyle(obj, name) {
+			if(obj.currentStyle) {
+				return obj.currentStyle[name];
+			} else {
+				return getComputedStyle(obj, false)[name];
+			}
+		}
+
+		//运动框架
+		function startMove(obj, attr, iTarget) {
+			clearInterval(obj.timer);
+			obj.timer = setInterval(function() {
+				var cur = 0;
+				if (attr == 'opacity') {
+					cur = Math.round(parseFloat(getStyle(obj, attr)) * 100);
+				} else {
+					cur = parseInt(getStyle(obj, attr));
+				}
+
+				var speed = (iTarget - cur) / 50;
+				speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+
+				if (cur == iTarget) {
+					clearInterval(obj.timer);
+				} else {
+					if (attr == 'opacity') {
+						obj.style.filter = 'alpha(opacity:' + (cur + speed) + ')';
+						obj.style.opacity = (cur + speed) / 100;
+					} else {
+						obj.style[attr] = cur+speed + 'px';
+					}
+				}
+			}, 30);
+		}
+
+		//
+		function follwCursor(oContainer, oGetMouse, oIn) {
+			//边框的位置；
+			var left = oContainer.offsetLeft;  //左边的x
+			var right = oContainer.offsetLeft + oContainer.offsetWidth;  //右边的x
+			var top = oContainer.offsetTop;    //上边的y
+			var down = oContainer.offsetTop + oContainer.offsetHeight; //下边的y
+			
+			oGetMouse.onmouseover = function(ev) {
+				var oEvent = ev || event;
+				//进入时，鼠标停在的位置离上下左右的距离
+				var pLeft = oEvent.clientX - left;    //离左的距离
+				var pRight = right - oEvent.clientX;   //离右的距离
+				var LR = Math.abs(pLeft - pRight);   //左右距离之差的绝对值
+				var pTop = oEvent.clientY - top;   //离上的距离
+				var pDown = down - oEvent.clientY;   //离下的距离
+				var TD = Math.abs(pTop - pDown);     //上下距离之差的绝对值
+				//利用相似三角形：对应边比值相等。如：
+				//三角形ABC，和三角形abc,有 a/b 等于 A/B; 所以，
+				//如果 LR/TD 大于原来的比值，说明是从左右进入的。
+				if(LR/TD > oContainer.offsetWidth/oContainer.offsetHeight){ 
+					//如果离左的距离 小于 离右的距离，说明是从左进入的，否则从右进入。
+					if(pLeft < pRight ) {
+						//从左入
+						oIn.style.left = (-oIn.offsetWidth) + 'px';
+					} else {
+						//从右入
+						oIn.style.left = (oIn.offsetWidth) + 'px';
+					}
+					oIn.style.top = 0;
+					startMove(oIn, 'left', 0);
+				} else {
+					if(pTop < pDown ) {
+						//从上入
+						oIn.style.top = (-oIn.offsetHeight) + 'px';
+					} else {
+						//从下入
+						oIn.style.top = (oIn.offsetHeight) + 'px';
+					}
+					oIn.style.left = 0;
+					startMove(oIn, 'top', 0);
+				}
+			}
+
+			oGetMouse.onmouseout = function (ev) {
+				var oEvent = ev || event;
+				if(oEvent.clientX <= left) {
+					startMove(oIn, 'left', -oIn.offsetWidth);
+				} else if (oEvent.clientX >= right) {
+					startMove(oIn, 'left', oIn.offsetWidth);
+				} else if (oEvent.clientY <= top) {
+					startMove(oIn, 'top', -oIn.offsetHeight);
+				} else if (oEvent.clientY >= down) {
+					startMove(oIn, 'top', oIn.offsetHeight);
+				}
+			}
+		}
+
+		window.onload = function () {
+			var aUl = document.getElementsByTagName('ul');
+			
+			for (var i = 0; i < aUl.length; i++) {
+				var aContainer = aUl[i].getElementsByTagName('li');
+				var aGetMouse = aUl[i].getElementsByTagName('a');
+				var aIn = aUl[i].getElementsByTagName('div');
+
+				for (var j = 0; j < aContainer.length; j++) {
+					follwCursor(aContainer[j], aGetMouse[j], aIn[j]);
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<ul>
+		<li>
+			<a href="javascript:;"></a>
+			<div>
+				<img src="images/bg.jpg" alt="images/bg.jpg">
+			</div>
+		</li>
+		<li><a href="javascript:;"></a><div><img src="images/bg.jpg" alt="images/bg.jpg"></div></li>
+		<li><a href="javascript:;"></a><div><img src="images/bg.jpg" alt="images/bg.jpg"></div></li>
+		<li><a href="javascript:;"></a><div><img src="images/bg.jpg" alt="images/bg.jpg"></div></li>
+		<li><a href="javascript:;"></a><div><img src="images/bg.jpg" alt="images/bg.jpg"></div></li>
+		<li><a href="javascript:;"></a><div><img src="images/bg.jpg" alt="images/bg.jpg"></div></li>
+	</ul>
+	<ul>
+		<li>
+			<a href="javascript:;"></a>
+			<div>
+				<img src="images/bg.jpg" alt="images/bg.jpg">
+			</div>
+		</li>
+		<li><a href="javascript:;"></a><div><img src="images/bg.jpg" alt="images/bg.jpg"></div></li>
+		<li><a href="javascript:;"></a><div><img src="images/bg.jpg" alt="images/bg.jpg"></div></li>
+		<li><a href="javascript:;"></a><div><img src="images/bg.jpg" alt="images/bg.jpg"></div></li>
+		<li><a href="javascript:;"></a><div><img src="images/bg.jpg" alt="images/bg.jpg"></div></li>
+		<li><a href="javascript:;"></a><div><img src="images/bg.jpg" alt="images/bg.jpg"></div></li>
+	</ul>
+	<ul>
+		<li>
+			<a href="javascript:;"></a>
+			<div>
+				<img src="images/bg.jpg" alt="images/bg.jpg">
+			</div>
+		</li>
+		<li><a href="javascript:;"></a><div><img src="images/bg.jpg" alt="images/bg.jpg"></div></li>
+		<li><a href="javascript:;"></a><div><img src="images/bg.jpg" alt="images/bg.jpg"></div></li>
+		<li><a href="javascript:;"></a><div><img src="images/bg.jpg" alt="images/bg.jpg"></div></li>
+		<li><a href="javascript:;"></a><div><img src="images/bg.jpg" alt="images/bg.jpg"></div></li>
+		<li><a href="javascript:;"></a><div><img src="images/bg.jpg" alt="images/bg.jpg"></div></li>
+	</ul>
+</body>
+</html>
