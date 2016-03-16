@@ -1,0 +1,97 @@
+*{
+	margin:0px;
+	padding:0px;
+	font-family: "Mcrosoft Yahei";
+}
+
+body{padding: 20px;}
+
+.box1{
+	padding:20px;
+	background-color:#eee;
+	border:1px solid #999;
+	overflow: hidden;
+}
+
+.teamLogo{
+	padding:20px;
+	float: left;
+	width:160px;
+	color:#003D79;	
+	background-color: #ffffff;
+	/*overflow:hidden;本行加上或去掉效果一样，虽然子元素用了浮动，但父元素没有受到影响*/	
+}
+
+.teamLogo img{
+	vertical-align: text-top; 
+	width:80px;
+	height:80px;
+	padding-right:20px;
+}
+
+.teamLogo p{  /*不用<span>,直接用<p>,因为是块级元素，比较好布局*/
+	width:60px; 
+	font-size:15px;
+	float:right;
+	text-align: center;
+}
+
+/*这里用绝对定位实现了上面teamLogo这部分的布局，觉得对于局部布局，绝对定位好用点，
+  相对比较方便和精确
+.teamLogo{
+	padding:20px;
+	width:160px;
+	color:#003D79;	
+	background-color:#ececff;
+	position: relative;
+}
+
+.teamLogo img{
+	width:80px;
+	height:80px;
+	padding:0px 20px 0px 0px;
+}
+
+.teamLogo p{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width:60px; 
+	padding:0px;
+	font-size:15px;
+	text-align: center;*/
+
+.personalLogo{
+	padding:20px;
+	background-color:#ffffff;
+	width: 80px;
+	float: right;
+}
+
+.personalLogo li{
+	list-style-type:none;
+
+}
+
+.personalLogo li img{
+	display: block;/*如果没有这行，<li>块的高度将比80px大一点，为什么？*/
+	width:80px;
+	height:80px;
+
+}
+
+.personalLogo li.a{
+	margin-top: 20px;
+}
+
+.teamIntroduce{
+	margin-right: 140px;
+	margin-left: 220px;
+	padding: 20px;
+	background-color: #ffffff;
+	margin-right: 140px;
+}
+
+.teamIntroduce p{
+	text-indent: 20px;
+}
