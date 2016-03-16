@@ -1,0 +1,40 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+.grayBg{
+	width: 400px;
+	height: 200px;
+	background-color: #ccc;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+}
+
+.sector1{
+	 width: 50px;
+	 height: 0px;
+	 border:0 solid transparent;
+	 border-bottom:50px solid #fc0; 
+	 -moz-border-radius:0 0 50px 0; /*为适应不同内核的浏览器，使用不同的前缀*/
+	 -webkit-border-radius:0 0 50px 0; 
+	 border-radius:0 0 50px 0;
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+}
+.sector2{
+	 width: 50px; 
+	 height: 0px;
+	 border:0 solid transparent;
+	 border-top:50px solid #fc0; 
+	 -moz-border-radius:0 100px 100px 0; 
+	 -webkit-border-radius:0 100px 100px 0;
+	 border-radius:50px 0 0 0; 
+	 position: absolute;
+	 bottom: 0;
+	 right: 0;
+}
