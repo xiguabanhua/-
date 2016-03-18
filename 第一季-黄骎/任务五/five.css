@@ -1,0 +1,181 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-03-17 17:47:48
+ * @version $Id$
+ */
+ *{
+ 	margin:0;
+ 	padding: 0;
+ 	font-family: "微软雅黑";
+ 	list-style: none;
+/*  	font-size: 12px; */
+/*头部和尾部开始*/
+ }
+#header,footer{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background-color: #000;
+	color: #fff;
+}
+#header img{
+	float: left;
+	padding-left: 40px;
+}
+#header nav{
+	float: right;
+	width: 50%;
+	height: 100%;
+
+}
+#header li{
+	height: 100%;
+	list-style: none;
+	padding-right: 20px;
+	display: inline-block;
+}
+#header li a{
+	text-decoration: none;
+	color: #FFF;
+	opacity: 1;
+}
+#header li a:hover{
+	opacity: 0.8;
+}
+#clear{
+	clear: both;
+}
+/*头部和尾部结束*/
+/*文章主题部分开始*/
+article{
+	padding:0 322px 0 0;
+	overflow: auto;
+	margin:20px;
+}
+.content {
+	width: 100%;
+}
+.content,aside{
+	float: left;
+	position: relative;
+	box-sizing: border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+section img,figure div span img{
+	display: block;
+	margin:10px 0; 
+
+}
+section,figure,aside{
+	box-shadow: 2px 2px 2px gray;
+	-webkit-box-shadow: 2px 2px 2px gray;
+	-moz-box-shadow:2px 2px 2px gray;
+	-o-box-shadow:2px 2px 2px gray;
+	border: 1px solid #ccc;
+	padding: 20px;
+	margin-bottom: 20px;
+
+}
+section header hgroup h2,
+section header hgroup h3,
+section header hgroup p{
+	margin-top:20px;
+	margin-bottom: 20px;
+	opacity: 1;
+}
+section header hgroup h3,
+section header hgroup p{
+	opacity: 0.6;
+}
+figure div span{
+	display: inline-block;
+	border: 1px solid #ccc;
+	padding: 10px;
+	text-align: center;
+	margin: 10px;
+}
+section ol{
+	padding:0 20px 20px 20px;
+}
+table {
+	width: 100%;
+	border-collapse:collapse;
+}
+table>tbody>tr>th{
+	text-align: left;
+
+}
+table>tbody>tr>th,table>tbody>tr>td{
+	width: 33.33%;
+	height: 30px;
+	border: 1px solid #ccc;
+	padding-left:10px;
+}
+th{
+	background-color: #000;
+	color: #fff;
+}
+tr:last-child{
+	background-color: #ccc;
+}
+/*文章主题部分结束*/
+/*侧栏开始*/
+aside{
+	width:300px;
+	margin-left:-300px;
+	right: -320px;
+	padding:20px;
+}
+aside h5{
+	padding:10px;
+	border-left: 2px solid #ccc;
+}
+aside:not(h5){
+	font-size: 13px;
+}
+aside form span{
+	display: block;
+	padding:10px 0 10px 10px;
+}
+aside form span label,aside form span input{
+	display: inline-block;
+}
+aside form span label{
+	padding-right: 20px;
+	width: 100px;
+	text-align: right;
+	vertical-align: top;
+}
+.text-input{
+	width: 120px;
+	height: 15px;
+}
+.choice-input{
+	padding-right:10px;
+}
+i{
+	display: block;
+	padding-bottom: 10px;
+	text-align: right;
+	color: #ccc;
+}
+textarea{
+	width: 125px;
+	height: 100px;
+}
+button{
+	display: block;
+	width: 100%;
+	padding: 10px;
+	background-color: blue;
+	border-radius:10px;
+	font-size: 16px;
+	border: 0;
+	color: #fff;
+}
+/*侧栏结束*/
