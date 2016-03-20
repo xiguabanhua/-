@@ -1,0 +1,741 @@
+*{
+	margin: 0;
+	padding:0;
+	border:0;
+	font-family: "Microsoft YaHei","iconfont"  !important;
+}
+a{
+	text-decoration: none;
+}
+a:visited{
+	color:black;
+}
+ul{
+	list-style: none;
+}
+
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot'); /* IE9*/
+  src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-file:before { 
+	padding-right: 5px;
+	content: "\e602"; }
+.icon-fangdajing:before { content: "\e601"; }
+.icon-down:before { content: "\e604"; }
+.icon-right:before { content: "\e605"; }
+.icon-doc:before { 
+	padding-right: 3px;
+	content: "\e606"; 
+}
+.icon-star:before { 
+	padding-right: 10px;
+	content: "\e607"; 
+}
+.icon-yonghu{
+	color: white;
+	font-weight: bolder;
+	vertical-align: middle;
+	font-size: 16px;
+	font-size: 17px\0;
+	vertical-align: -5%\0;
+}
+
+.clf:before,
+.clf:after{
+	content: " ";
+	display: table;
+}
+.clf:after{
+	clear: both;
+}
+.container{
+	width: 1280px;
+	margin:0 auto;
+	font-size: 12px;
+}
+.topnav{
+	width: 100%;
+	min-width: 650px;
+	height: 55px;
+	background: #2189bf;
+}
+	.topnav .logo{
+		float: left;
+		margin: 10px 0 0 50px;
+	}
+	.topnav .login-box{
+		float: right;
+		height: 100%;
+		margin-right: 70px;
+	}
+		.login-box .login{
+			display: inline-block;
+			line-height: 55px;
+			margin-left: 20px;
+		}
+				.login-box .login span{
+					color: white;
+				}
+		.login-box .searchBar{
+			display: inline-block;
+			position: relative;
+		}
+			.login-box .searchBar input{
+				width: 285px;
+				height: 30px;
+				line-height: 30px;
+				outline: none;
+				
+			}
+			.login-box .searchBar:before{
+				position: absolute;
+				top: 0;
+				left: -15px;
+				content: " ";
+				display: inline-block;
+				height: 30px;
+				width: 15px;
+				border-radius:30px 0 0 30px;
+				background: #fff;
+			}
+			.login-box .searchBar:after{
+				position: absolute;
+				top: 0;
+				right: -15px;
+				content: " ";
+				display: inline-block;
+				height: 30px;
+				width: 15px;
+				border-radius:0 30px 30px 0;
+				background: #fff;
+			}
+/*左侧功能栏*/
+.sidebar{
+	width: 260px;
+	background: #2a2e3d;
+	height: 1207px;
+	float: left;
+}
+	.user-info{
+		height: 150px;
+		width: 100%;
+	}
+		.user{
+			width: 170px;
+			padding-top:18px;
+			margin: 0 auto;
+
+		}
+		.avatar{
+			display: inline-block;
+			position: relative;
+			width: 55px;
+			height: 55px;
+			border-radius: 50%;
+			background: #b2aaad;
+			vertical-align: middle;
+		}
+			.avatar:after{
+				content: " ";
+				position: absolute;
+				top:2px;
+				left: 2px;
+				display: block;
+				width: 45px;
+				height: 45px;
+				border-radius: 50%;
+				background: transparent;
+				border: 3px solid #2a2e3d;
+				z-index: 10;
+			}
+			.avatar img{
+				position: relative;
+				top:5px;
+				left: 5px;
+				border-radius: 50%;
+				width: 45px;
+				height: 45px;
+			}
+		.user span{
+			font-size: 16px;
+			color: #fff;
+			padding-left: 16px;
+		}
+	.count-info{
+		width: 178px;
+		margin: 25px 0 0 25px;
+	}
+		.count-info div{
+			float: left;
+			color: #6e8095;
+			width: 86px;
+			text-align: center;
+			line-height: 14px;
+		}
+		.count-info a{
+			font-size: 15px;
+			display: block;
+			color: #6e8095;
+		}
+		.collect{
+			border-right:1px solid #323746;
+		}
+		.fans{
+			border-left:1px solid #323746;
+		}
+	.menu li{
+		color: #6e8095;
+		display: block;
+		padding:15px 0 15px 44px;
+		cursor: pointer;
+	}
+		.menu .active{
+			background: #383d4e;
+			color: #fff;
+		}
+		.menu li:hover{
+			background: #383d4e;
+			color: #fff;
+		}
+		.menu .sheet{
+			background: url("../images/ico-sheet.png") no-repeat;
+			background-position: 0 2px;
+			padding-left: 25px;
+		}
+		.menu .share{
+			background: url("../images/ico-share.png") no-repeat;
+			background-position: 0 2px;
+			padding-left: 25px;
+		}
+		.menu .cInfo{
+			background: url("../images/ico-count.png") no-repeat;
+			background-position: 0 2px;
+			padding-left: 25px;
+		}
+			.files li{
+				padding:15px 0 0 25px;
+			}
+				.files li span{
+					padding-left: 5px;
+				}
+
+				.doc li{
+					padding-left: 35px;
+				}
+/*内容区*/
+	.main{
+		float: left;
+		width: 1020px;
+	}
+		.main .filePath{
+			height: 30px;
+			line-height: 30px;
+			padding-left: 30px;
+			
+		}
+			.main .filePath a{
+				color:#eeeeed;
+			}
+			.main .filePath a:nth-child(1){
+				padding-right: 5px;
+			}
+			.main .filePath a:nth-last-child(1){
+				color:#759fc6;
+				font-weight: bold;
+			}
+				.main .filePath a:before{
+					content: "/";
+					padding: 0 4px;
+				}
+				.main .filePath a:nth-child(1):before{
+					content: " ";
+				}
+	.content-box{
+		width: 890px;
+		background: #eeeeed;
+		padding: 18px 65px 155px 65px;
+	}
+		.content-box .select-box{
+			background: #fff;
+			width: 890px;
+			height: 82px;
+		}
+			.condition{
+				color:#aaaaaa;
+				height: 100%;
+			}
+				
+				/*所有select box的样式*/
+				.s-box{
+					display: inline-block;
+				}
+					.s-box span{
+						line-height: 30px;
+					}
+					.s-box a{
+						width: 70px;
+						margin-left: 10px;
+						font-weight: bold;					
+						}
+					.s-box .select{
+						display: inline-block;
+						height: 23px;
+						line-height: 23px;
+						border:2px solid #eeeeed;
+						padding-left: 8px;
+					}
+					.s-box .select:after{
+						content: "\e604";
+						font-size: 10px;
+						float: right;
+						padding-right: 8px;
+					}
+			.nape{
+				float: left;
+				margin: 15px 30px;
+			}
+			.trader{
+				position: relative;
+				float: left;
+				width: 185px;
+				margin: 15px 0;
+			}
+			.trader:after{
+				display: block;
+				position: absolute;
+				top:10px;
+				left: 160px;
+				width: 30px;
+				height: 50px;
+				content: " ";
+				background:url("../images/change.png") no-repeat;
+			}
+				.trader .select{
+					width: 108px;
+				}
+			.detail{
+				float: left;
+				width: 295px;
+				margin: 15px 30px;
+			}
+				.detail .date .select{
+					width: 108px;
+				}
+				.detail .time{
+					float: right;
+				}
+					.detail .time .select{
+						width: 68px;
+						margin-left: 5px;
+					}
+				.detail .dealNum{
+					float: right;
+				}
+					.detail .dealNum .select{
+						width: 108px;
+					}
+
+			.sBtn{
+				height: 100%;
+				line-height: 82px;
+			}
+				.sBtn a{
+					display: inline-block;
+					width: 50px;
+					height: 25px;
+					line-height: 25px;
+					background: #388ac1;
+					text-align: center;
+					color: white;
+					border-radius: 3px;
+				}
+		.history{
+			margin-top: 10px;
+			height: 60px;
+		}
+			.history a{
+				float: left;
+				display: inline-block;
+				height: 100%;
+				line-height: 60px;
+				width: 30px;
+				text-align: center;
+				background: #fff;
+			}
+				.history a:nth-child(3){
+					margin:0 5px;
+				}
+			.history .fare li{
+				float: left;
+			}
+			.history .fareInfo{
+				position: relative;
+				display: inline-block;
+				width: 110px;
+				height: 60px;
+				background: #fff;
+				margin-left: 5px;
+				text-align: center;
+				line-height: 30px;
+			}
+			.history .now:before{
+				content: " ";
+				width: 110px;
+				height: 4px;
+				position: absolute;
+				top:0;
+				left: 0;
+				background: #4388c9;
+			}
+				.fareInfo .f-time{
+					font-weight: bold;
+				}
+				.fareInfo .f-money{
+					color:#ec6500;
+					font-size: 21px;
+				}
+					.fareInfo .f-money:before{
+						content: "￥";
+						color: #aaaaaa;
+						font-size: 15px;
+						font-weight: bold;
+					}
+
+				.history .hisBtn{
+					float: right;
+					width: 110px;
+					background: url("../images/his.png") no-repeat white;
+					background-position: 20px 15px;
+					text-align: right;
+					padding-right: 20px;
+				}
+
+		.stat{
+			margin-top: 20px;
+		}
+			.stat p{
+				font-weight: bold;
+			}
+			.stat .clf{
+				margin-top:5px;
+			}
+			.stat .srat-box{
+				float: left;
+				width: 196px;
+				height: 70px;
+				background: #fff;
+				margin-right: 30px;
+			}
+			.stat .srat-box:nth-last-child(1){
+				margin-right: 0;
+			}
+				.stat .srat-box .word{
+					display: inline-block;
+					line-height: 25px;
+					margin: 10px 0 0 8px;
+				}
+					.srat-box .word span{
+						color:#aaa;
+						font-weight: bold;
+					}
+				.stat .srat-box .color-box{
+					display: inline-block;
+					width: 60px;
+					height: 45px;
+					line-height: 70px;
+					float: right;
+					margin:12px 15px;
+				}	
+				.green{border-left:4px #43b29e solid;}
+				.red{border-left:4px #d04a36 solid;}
+				.blue{border-left:4px #388ac1 solid;}
+				.yellow{border-left:4px #e2cd46 solid;}
+					.green .color-box{background: #43b29e;}
+					.red .color-box{background: #d04a36;}
+					.blue .color-box{background: #388ac1;}
+					.yellow .color-box{background: #e2cd46;}
+
+		.info-box{
+			margin-top: 15px;
+			display: inline-block;
+			border:2px solid #cdcbce;
+			border-radius: 10px;
+		}
+			.info-box .title{
+				height: 40px;
+				line-height: 40px;
+				color: #aaa;
+				padding-left: 20px;
+				font-weight: bold;
+			}
+			.info-box .substance{
+				border-radius: 0 0 10px 10px;
+				background: #fff;
+			}
+		.stuff{
+			width: 530px;
+		}
+			.stuff .stuff-info{
+				padding: 10px 20px 0px 20px;
+				position: relative;
+				height: 305px;
+			}
+			.stuff-info .tab-content{
+				position: relative;
+			}
+				.tab-content .tab{
+					background: #fff;
+					color:#535353;
+					padding-top: 26px;
+				}
+				.tab span{
+					position: absolute;
+					top:0;
+					left: 0;
+					display: inline-block;
+					width: 80px;
+					height: 25px;
+					line-height: 25px;
+					text-align: center;
+					background: #ededf0;
+					border:1px solid #d6d7d7;
+					border-radius: 3px 3px 0 0;
+					cursor: pointer;
+					margin-right: 5px;
+					z-index: 12;
+				}
+				.tab span:hover{
+					background: #fff;
+					border-bottom: 1px solid #fff;
+				}
+				.tab span:hover + table{
+					z-index: 10;
+
+				}
+
+				#tab2 span{left: 85px;}
+				#tab3 span{left: 170px;}
+				#tab4 span{left: 255px;}
+				#tab5 span{left: 340px;}
+
+				 .tab-content table{
+				 	position: absolute;
+				 	top: 26px;
+				 	left:0;
+					padding: 30px 35px 35px 35px;
+					border: 1px solid #d6d7d7;
+					border-radius: 3px;
+					background: #fff;
+					z-index: 1;
+				}
+					.stuff-info .tab-content table td{
+						width: 100px;
+						height: 30px;
+						outline:1px solid #d6d7d7;
+						line-height: 30px;
+						text-align: center;
+					}
+
+	.stuff-sheet{
+		float: right;
+		width: 345px;	
+	}
+		.s-detail{
+			padding:10px 32px;
+		}
+			.s-detail li{
+				border-bottom: 1px solid #c3c2c2;
+				padding-left: 10px;
+				height: 45px;
+				line-height: 20px;
+			}
+			.s-detail p{
+				color:#c3c2c2;
+				font-weight: bold;
+			}
+			.s-detail .mid span{
+				display: inline-block;
+				width: 85px;
+				height: 45px;
+				padding-left: 10px;
+			}
+				.s-detail .mid>span:first-child{
+					border-right: 1px solid #c3c2c2;
+				}
+			.s-detail ul li:nth-child(3){
+				height: 148px;
+			}
+			.s-detail div{
+				margin:10px 0 20px 0;
+				line-height: 25px;
+			}
+				.s-detail a{display: inline-block;}
+				.s-detail div a:last-child{
+					float: right;
+					width: 50px;
+					height: 25px;
+					color:white;
+					background: #388ac1;
+					text-align: center;
+					border-radius: 2px;
+				}
+				.s-detail div input{
+					margin-right: 8px;
+					-webkit-appearance: none;
+					width: 14px;
+					height: 14px;
+					background: #d5d5d5;
+					vertical-align: text-top;
+				}
+					.s-detail div input:checked{
+						background: #d5d5d5 url("../images/check.png") no-repeat center;
+					}
+		.calender{
+			width: 350px;
+			margin-top: 10px;
+		}
+		.calender-box{
+			width: 312px;
+			margin: 0 auto;
+		}
+			.year-box span{
+				display: inline-block;
+				border:1px solid #cbcccc;
+				height: 20px;
+				line-height: 20px;
+				margin:10px 1.5px;
+				text-align: center;
+			}
+				.year-box span i{
+					color:#c2c3c4;
+					font-size: 12px;
+					display: inline-block;
+					width: 15px;
+				}
+				.year-box span b{display: inline-block;}
+				.year-box span:nth-child(1) b{width: 44px;}
+				.year-box span:nth-child(2) b{width: 30px;}
+				.year-box span:nth-child(3) b{width: 50px;}
+				.year-box span:nth-child(4) b{width: 58px;}
+
+				.year-box span>i{border-left: 1px solid #f6f7f8;}
+
+					.year-box i:nth-child(3){
+						border-left: 0;
+						border-right: 1px solid #f6f7f8;
+					}
+		.showMon{
+			padding-bottom: 15px;
+			font-size: 11.36px;
+		}
+		.showMon table{
+			border-collapse: collapse;
+			text-align: center;
+		}
+		.showMon tbody td{
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			margin:2px;
+			line-height: 18px;
+			
+		}
+			.showMon thead td{
+				display: inline-block;
+				border-top: 2px solid #b2cfed;
+				border-bottom: 2px solid #e3e3e4;
+				height: 30px;
+				width: 44px;
+				line-height: 30px;
+
+			}
+			.fst b{color:#c9161d;}
+			.showMon tbody tr td:nth-child(6) p{color:#c9161d;}
+			.showMon tbody tr td:nth-child(7) p{color:#c9161d;}
+
+			.showMon .noted{outline: 1px solid #f6c945;}
+
+	.content-box .rank{
+		margin-top: 10px;
+		float: right;
+		width: 520px;
+	}
+		.rank-box{
+			width: 448px;
+			padding:15px 40px 25px;
+			text-align: center;
+			font-weight: bold;
+		}
+		.rank-box table{
+			border-collapse: collapse;
+		}
+		.rank-box td{
+			border: 1px solid #c7c8c8;
+		}
+		.rank-box thead td{
+			font-size: 13px;
+			height: 30px;
+			line-height: 30px;
+		}
+		.rank-box tbody td{
+			height: 23px;
+			line-height: 23px;
+			cursor: pointer;
+		}
+		.rank-box tr td:nth-child(1){width: 65px;}
+		.rank-box tr td:nth-child(2){width: 90px;}
+		.rank-box tr td:nth-child(3){
+			width: 100px;
+			border-right: 0;
+		}
+		.rank-box tr td:nth-child(4){
+			width: 188px;
+			border-left: 0;
+		}
+			.proBar{
+				width: 170px;
+				height: 5px;
+				background: #dcdcdc;
+				position: relative;
+			}
+		.rank-box tbody span{
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: inline-block;
+			height: 5px;
+			background: #7fcbf0;
+		}
+		.rank-box tbody tr:hover{background: #f4f5f6}
+		.rank-box tbody tr:nth-child(1) span{
+			background: #ed6e52;
+			width: 140px;
+		}
+		.rank-box tbody tr:nth-child(2) span{
+			background: #ef8150;
+			width: 125px;
+		}
+		.rank-box tbody tr:nth-child(3) span{
+			background: #f19f4f;
+			width: 105px;
+		}
+		.rank-box tbody tr:nth-child(4) span{ width: 95px;}
+		.rank-box tbody tr:nth-child(5) span{ width: 85px;}
+		.rank-box tbody tr:nth-child(6) span{ width: 75px;}
+		.rank-box tbody tr:nth-child(7) span{ width: 65px;}
+		.rank-box tbody tr:nth-child(8) span{ width: 55px;}
+		.rank-box tbody tr:nth-child(9) span{ width: 45px;}
+		.rank-box tbody tr:nth-child(10) span{ width: 35px;}
