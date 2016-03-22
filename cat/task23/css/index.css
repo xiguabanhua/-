@@ -1,0 +1,293 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+img{
+	border:0;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+
+
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot'); /* IE9*/
+  src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff') format('woff'), /* chrome、firefox */
+  url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-permissionsfilling:before { content: "\e601"; }
+.icon-feedback:before { content: "\e602"; }
+.icon-user:before { content: "\e600"; }
+
+
+.clearfix:after{
+	content: ".";
+	height: 0;
+	clear: both;
+	display: block;
+	visibility: hidden;
+}
+.clearfix{
+	*zoom:1;
+
+}
+
+h1{
+	text-align: center;
+}
+/*顶部栏*/
+
+.top{
+	height: 50px;
+	background-color: #2a3b4c;
+}
+	.brand{
+		margin-left: 2em;
+		display: inline-block;
+	}
+	.mid-wel{
+		display: inline-block;
+		position: absolute;
+		left: 50%;
+		margin-left: -70px;
+	}
+	.l-r{
+		float: right;
+		color: white;
+	}
+		.l-r li{
+			display:inline-block;
+			height: 50px;
+			width: 3.5em;
+			line-height: 50px;
+			text-align: center;
+			vertical-align: middle;
+		}
+			.l-r li a{
+				color: white;
+			}
+				.l-r li a:hover{
+					color: #e9662c;
+					font-weight: bold;
+					text-decoration: underline;
+				}
+	.header{
+		height: 130px;
+		padding-bottom: 20px;
+	}
+		.header div{
+			width: 300px;
+			margin: 0 auto;
+			padding-top: 45px;
+
+		}
+	.r-body{
+		background-color: white;
+		width: 80%;
+		margin: 0 auto 50px;
+		border:1px solid black;
+	}
+
+	/*Step共同部分*/
+	.reg-main{
+		width: 80%;
+		margin: 0 auto;
+	}
+		.r-step{
+			margin-top: 30px;
+			border-bottom: 1px solid #f3f3f3;
+			height: 34px;
+		}
+			.r-step ul{
+				width: 80%;
+				margin: 0 auto;
+			}
+				.r-step li{
+					display: block;
+					float: left;
+					font-size: 20px;
+					padding-left: 1.5em;
+					padding-right: 1.5em;
+					padding-bottom: 10px;
+				}
+				.r-step li .icon{
+					display: inline-block;
+					color: white;
+					font-size: 16px;
+					width: 18px;
+					height: 18px;
+					background-color: #f0f0f0;
+					border-radius: 50%;
+					text-align: center;
+				}
+				.r-step .cur{
+					color: #fa0;
+					border-bottom: 2px solid #fa0;
+				}
+					.r-step .cur b{
+						background-color: #fa0;
+					}
+
+	/*Step1*/		
+		.reg-box{
+			width: 1000px;
+			margin:30px auto;
+		}
+			.item{
+				height: 70px;
+			}	
+				.item span{
+					display: inline-block;
+					width: 150px;
+					text-align: right;
+				}
+				.item b{
+					color: red;
+				}
+			.o-reg{
+				display:inline-block;
+				position: relative;
+			}
+				.o-reg input{
+					width: 270px;
+					height: 38px;
+					line-height: 38px;
+					padding-left: 10px;
+					background-color: #f6f6f6;
+					border:1px solid black;
+				}
+				.o-reg .iconfont{
+					position: relative;
+					left: -38px;
+					color: #666666;
+				}
+				.error{
+					position: relative;
+					left: -20px;
+					color: #f00;
+					display: inline-block;
+					background-color: #FFEBEB;
+					border:1px solid #ffbdbe;
+					height: 38px;
+					line-height: 38px;
+					font-size: 10px;
+					padding-left: 10px;
+					padding-right: 10px;
+				}
+				.focus{
+					position: relative;
+					left: -20px;
+					display: inline-block;
+					background-color: #f4f4f4;
+					border:1px solid #666666;
+					height: 38px;
+					line-height: 38px;
+					font-size: 10px;
+					padding-left: 10px;
+					padding-right: 10px;
+				}
+				.o-reg .succeed:before{
+					content: " ";
+					background-image: url(../images/true.png);
+					position: relative;
+					left: -64px;
+					top:5px;
+					display:inline-block;
+					height: 20px;
+					width: 20px;
+				}
+		.Code{
+			display:inline-block;
+			position: relative;
+		}
+			.noActive{
+				cursor: not-allowed;
+			}
+			.get-code-btn{
+				display:inline-block;
+				line-height: 38px;
+				border:1px solid black;
+				background-color: #f8f8f8;
+				margin-right: 30px;
+			}
+				.get-code-btn span{
+					text-align: center;
+					color: black;
+					vertical-align: middle;
+				}
+			.regCode{
+				width: 110px;
+				height: 38px;
+				line-height: 38px;
+				padding-left: 10px;
+				background-color: #f6f6f6;
+				border:1px solid black;
+			}	
+				
+		.reg-btn{
+			
+		}
+			.reg-btn a{
+				display:block;
+				width: 180px;
+				height: 40px;
+				margin:0 auto;
+				background-color: #fa0;
+				text-align: center;
+				color: white;
+				line-height: 40px;
+				font-size: 20px;
+				font-weight: bold;
+			}
+			.reg-btn a:hover{
+				background-color: #ff9c00;
+			}
+
+
+	/*Step2*/
+	.o-reg span{
+		display: inline-block;
+		height: 38px;
+		width: 60px;
+	}
+		.o-reg .regC-bank{ 
+			width: 120px;
+		}
+	/*Step3*/
+	.reg-box p{
+		text-align: center;
+		margin-bottom: 30px;
+	}
+		.reg-box .back-i{
+			display:block;
+			text-align: center;
+		}		
+
+
+/*底部*/	
+.deep{
+	background-color: #2a3b4c;
+	height: 40px;
+	width: 100%;
+	text-align: center;
+	color: white;
+}
+	.deep span{
+		margin-right: 30px;
+		line-height: 40px;
+	}
