@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>task23</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<h1>表单校验</h1>
+	<!--注册部分-->
+	<div class="r-body">
+	<!--Step1-->
+		<!--个人信息部分-->
+		<div class="reg-main">
+			<div class="reg-box">
+				<form class="p-info">
+					<div class="item">
+						<span>
+							<b>*</b>
+							用户名：
+						</span>
+						<div class="o-reg">
+							<input type="text" class="regName" id="regName">
+							<i class="iconfont" id="regName_succeed">&#xe615;</i>
+							<label id="regName_error"></label>
+						</div>
+
+					</div>
+					<div class="item">
+						<span>
+							<b>*</b>
+							请设置密码：
+						</span>
+						<div class="o-reg">
+							<input type="password" class="regPassword" id="regPwd">
+							<i class="iconfont" id="regPassword_succeed">&#xe618;</i>
+							<label id="regPwd_error"></label>
+						</div>
+
+					</div>
+					<div class="item">
+						<span>
+							<b>*</b>
+							请确认密码：
+						</span>
+						<div class="o-reg">
+							<input type="password" class="regRepassword" id="rePwd">
+							<i class="iconfont" id="regRepassword_succeed">&#xe618;</i>
+							<label id="rePwd_error"></label>
+						</div>
+
+					</div>
+					<div class="item">
+						<span>
+							<b>*</b>
+							邮箱：
+						</span>
+						<div class="o-reg">
+							<input type="text" class="regMail" id="regMail">
+							<i class="iconfont" id="regMail_succeed">&#xe619;</i>
+							<label id="regMail_error"></label>
+						</div>
+					</div>
+					<div class="item">
+						<span>
+							<b>*</b>
+							手机号码：
+						</span>
+						<div class="o-reg">
+							<input type="text" class="regPhone" id="regPhone">
+							<i class="iconfont" id="regPhone_succeed">&#xe616;</i>
+							<label id="regPhone_error"></label>
+						</div>
+
+					</div>
+					<div class="reg-btn">
+						<a id="s1" href="">下一步</a>
+					</div>
+				
+				</form>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
