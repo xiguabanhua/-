@@ -76,7 +76,7 @@ function sortAqiData(data) {
 	for(var i=0;i<length;i++){
 		var k=data[i][1];//存数组的数字//
 		var h=data[i];//存数组//
-		for(var j=i+1;j<length-i-1;j++)
+		for(var j=i+1;j<length;j++)//这里排序算法可以再做
 		{
 			if(data[j][1]<k){//比较数组中的数字//
 				k=data[j][1];//存最小数组中的数字
