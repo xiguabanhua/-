@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css">
+	#content{
+		margin: 50px auto;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		align-content: center;
+		width: 90%;
+		border: 2px solid #ccc;
+		min-height: 200px;
+	}
+	#content>span{
+		display: inline-block;
+		background-color: green;
+		color:#FFF;
+		padding: 2px;
+		margin: 10px 2px;
+		vertical-align: text-center;
+		box-sizing: content-box;
+		-webkit-box-sizing: content-box;
+		-moz-box-sizing: content-box;
+		-moz-box-sizing: content-box;
+		box-shadow: 0px 0px 18px #ccc;
+	}
+</style>
+<script type="text/javascript" src="task.js"></script>
+</head>
+<body>
+   <input type="number" id="number" placeholder="请输入10~100的数">
+ <!--   <div id="button-onclick"> -->
+	   <button id="left-in">左侧入</button>
+	   <button id="right-in">右侧入</button>
+	   <button id="left-out">左侧出</button>
+	   <button id="right-out">右侧出</button>
+	   <button id="random">随机</button>
+	   <button id="quicksort">快排</button>
+	   毫秒：<input type="text" id="time"value="10">
+  <!--  </div> -->
+   
+   <div id="content"></div>
+</body>
+</html>
