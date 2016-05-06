@@ -1,0 +1,493 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-03-27 11:07:38
+ * @version $Id$
+ */
+body{
+	min-width: 1280px;
+	margin:auto;
+}
+nav,section,footer{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+}
+/*nav开始*/
+nav{
+/* 	 width: 100%;  */
+/*为什么加了100%会出现滚动条*/
+	height: 50px;
+/* 	background-color: #ccc; */
+	padding: 0 50px 0 50px;
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -o-flex;
+	position: fixed;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+	top: 0;
+	z-index: 4;
+	background-color: #fff;
+	width: 100%;
+	
+}
+.logo img{
+	vertical-align: middle;
+}
+nav>ul,nav>div{
+	display: inline-block;
+	line-height: 50px;
+	box-sizing: border-box;
+	box-sizing: -webkit-border-box;
+	box-sizing: -moz-border-box;
+	box-sizing: -o-border-box;
+}
+nav>div:nth-of-type(3){
+    width: 70px;
+	font-size: 14px;
+	line-height: 50px;
+
+}
+nav>div:nth-of-type(3)>a{
+	vertical-align: text-bottom;/*为什么text-bottom可以？*/
+	color: #eb4f38;
+}
+nav>div:nth-of-type(3)>img{
+	width: 26px;
+	height: 45px;
+	display: inline-block;
+}
+nav>ul>li{
+	display: inline-block;
+	color: #4D4D4D;
+	width: 100px;
+}
+nav>ul>li>a:hover{
+	display: inline-block;
+	height: 47px;
+	border-bottom: 3px solid #eb4f38;
+}
+.fill{
+	flex:1;
+	-webkit-flex:1;
+	-moz-flex:1;
+	-o-flex:1;
+/* 	background-color: #eb4f38; */
+}
+/*nav结束*/
+/*part-01开始*/
+.part-01{
+	width: 100%;
+	height: 690px;
+	background-image: url("images/2.png");
+	background-size: cover;
+	vertical-align: middle;
+	color: #fff;
+	font-family: "微软雅黑";
+}
+.part-01 .title{
+	width: 500px;
+	height: 300px;
+	left: 14%;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+}
+.part-01 .title>p:first-child{
+	color: #fff;
+	font-size: 60px;
+	padding: 20px 0 20px 0;
+}
+.part-01 .title>p:nth-child(2){
+	font-size: 21px;
+	line-height: 35px;
+}
+.part-01 .title>div{
+	width: 350px;
+	height: 60px;
+	background-color: #eb4f38;
+	line-height: 60px;
+	text-align: center;
+	font-size: 30px;
+	margin-top: 40px;
+}
+/*part-01结束*/
+/*part-02开始*/
+.part-02{
+	height: 250px;
+	width: 100%;
+	/* padding: 50px; */
+	font-size: 14px;
+
+}
+.part-02 .content{
+/* 	width: 100%; */
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	height: 250px;
+}
+.part-02 .content>li{
+	display: inline-block;
+	width: 24%;
+	text-align: center;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+
+}
+.part-02 .content>li>img{
+	padding-bottom: 50px;
+}
+.part-02 .content>li>p{
+	border-right: 1px solid #ccc;
+	padding-bottom: 20px;
+}
+.part-02 .content>li:last-child>p{
+	border-right: none;
+}
+/*part-02结束*/
+/*part-03开始*/
+.part-03{
+	width: 100%;
+	height: 400px;
+	text-align: center;
+	background-color: #edecec;
+	color: #a1a1a1;
+}
+.part-03>div{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+}
+.part-03>div>img{
+	padding-bottom: 50px;
+	/*要合并的东西，垂直居中和文本居中，还有照片的padding-bottom:50px*/
+}
+.part-03>div>p{
+	font-size: 56px;
+}
+/*part-03结束*/
+/*part-04开始*/
+.part-04{
+	width: 100%;
+	height: 340px;
+	background-image: url("images/8.png");
+	text-align:center;
+	color: #fff;
+}
+.part-04>div:first-child{
+	width: 400px;
+	margin: auto;
+	padding-top: 50px;
+}
+.part-04>div:first-child>p:nth-of-type(1){
+	font-size: 21px;
+}
+.part-04>div:first-child>span{
+	width: 30px;
+	height: 2px;
+	background-color: #fff;
+	display: inline-block;
+}
+.part-04>div:first-child>p:nth-of-type(2){
+	font-size: 12px;
+	line-height: 45px;
+}
+.part-04>div>div{
+	width: 200px;
+	height: 25px;
+/* 	background-color: #fff; */
+	display: inline-block;
+	border: 1px solid  #eb4f38;
+	line-height: 25px;
+	text-align: left;
+	overflow: hidden;
+}
+/*part-04结束*/
+/*part-05开始*/
+.part-05{
+	width: 100%;
+	background-color: #f8f8f8;
+
+}
+.part-05 .content{
+	width: 80%;
+	margin:auto;
+	padding:100px 0;
+	text-align: center;
+}
+.part-05 .content>div{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	display: inline-block;
+	height: 200px;
+	width: 24%;
+
+}
+.part-05 .content>div>img{
+	border: 1px solid #ccc;
+	padding: 10px 5px;
+	background-color: #fff;
+}
+.part-05 .content>div>p{
+	line-height: 25px;
+	
+}
+.part-05 .content>div>p:nth-of-type(1){
+	font-size: 16px;
+}
+.part-05 .content>div>p:nth-of-type(2){
+	font-size: 12px;
+	color: #a1a1a1;
+}
+.part-05 .content>div:nth-of-type(2)>p:nth-of-type(1){
+	/* word-spacing:2em; *//*word-spacing是英文的*/
+	letter-spacing: 30px;
+	/*letter-spacing是中文的字间距*/
+	margin-left: 20px;
+	font-size: 21px;
+}
+/*part-05结束*/
+/*part-06开始*/
+.part-06{
+	width: 100%;
+	display: flex;
+	-webkit-display: flex;
+	-moz-display: flex;
+	-o-display: flex;
+}
+
+.part-06>div:first-child{
+	width: 66%;
+	height: 567px;
+	background-image: url("images/13.png");
+	background-size: cover;
+}
+.part-06>div:last-child{
+	width: 33%;
+	margin: auto;
+	line-height: 40px;
+	text-align: center;
+}
+.part-06>div:first-child>div{
+	margin: auto;/*要想margin有效，该块状元素必须要有宽度*/
+	width: 50%;
+	position: relative;
+	top: 48%;
+	transform: translateY(-50%);
+	color: #fff;
+	text-align: center;
+	font-family: "微软雅黑";
+}
+.part-06>div:first-child>div>p:nth-of-type(1){
+	font-size: 50px;
+}
+.part-06>div:first-child>div>p:nth-of-type(2){
+	font-size: 158px;
+	line-height: 130px;
+	height: 160px;
+}
+.part-06>div:first-child>div>p:nth-of-type(n+3){
+	font-size: 21px;
+	line-height: 42px;
+}
+/*part-06结束*/
+/*part-07开始*/
+.part-07{
+	width: 100%;
+	display: flex;
+	-webkit-display: flex;
+	-moz-display: flex;
+	-o-display: flex;
+	column-count: 3;
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	-o-column-count: 3;
+	text-align: center;
+}
+.part-07>div{
+	width: 33%;
+	height: 500px;
+	display: inline-block;
+
+}
+.part-07>div>div{
+	margin: auto;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 21px;
+	line-height: 35px;
+}
+.part-07>div>div>span{
+	width: 30px;
+	height: 2px;
+	
+	display: inline-block;
+}
+.part-07>div:first-child>div>span{
+	background-color: #fff;
+}
+.part-07>div:nth-of-type(2)>div>span{
+	background-color: #000;
+}
+.part-07>div:first-child{
+	background-color:#e74f4d;
+	color: #fff;
+}
+.part-07>div:first-child>div>div{
+	border: 1px solid #fff;
+	width: 165px;
+	margin: 20px auto;
+	background-color: #e74f4d;
+	color: #fff;
+	transition: background 0.35s linear,color 0.35s linear;
+}
+.part-07>div:first-child>div>div:hover{
+	background-color: #fff;
+	color: #e74f4d;
+}
+.part-07>div:nth-of-type(2)>div>div{
+	border: 1px solid #e74f4d;
+	width: 165px;
+	margin: auto;
+	color: #e74f4d;
+	margin: 20px auto;
+	background-color: #fff;
+	color: #e74f4d;
+	transition: background 0.35s linear,color 0.35s linear;
+}
+.part-07>div:nth-of-type(2)>div>div:hover{
+	background-color: #e74f4d;
+	color: #fff;
+}
+.part-07>div:nth-of-type(3){
+	background-image: url("images/14.png");
+	background-size: cover;
+}
+/*part-07结束*/
+/*part-08开始*/
+.part-08{
+	width: 100%;
+	min-height: 500px;
+	padding: 110px 100px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+}
+.part-08>div:first-child{
+	text-align: center;
+	font-family: "微软雅黑";
+}
+.part-08>div>p:nth-of-type(1),footer>div>p:nth-of-type(1){
+	font-size: 21px;
+}
+.part-08>div>p:nth-of-type(2),footer>div>p:nth-of-type(2){
+	font-size: 12px;
+	line-height: 20px;
+}
+.part-08>div>p:nth-of-type(2){
+	color: #aaa;
+
+}
+.part-08>div>span{
+	width: 30px;
+	height: 2px;
+	vertical-align: middle;/*解决元素靠下的问题，和设计稿不符合*/
+	background-color: #e74f4d;
+	display: inline-block;
+}
+.part-08>div>aside,.part-08>form{
+	display: inline-block;
+}
+/*part-08结束*/
+/*footer开始*/
+footer{
+/* 	width: 100%; */
+	background-color: #32353e;	
+	min-height: 400px;
+	position: relative;
+}
+footer>div:first-child{
+	width: 600px;
+	margin: auto;
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate3d(-50%,-50%,0);
+	color: #fff;
+	text-align: center;
+	line-height: 40px;
+	width: 100%;
+}
+footer>div:last-child{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	background-color:#303039; 
+	padding:0px 50px 0 70px;
+	height: 50px;
+	line-height: 45px;
+	color: #fff;
+	font-size: 12px;
+}
+footer input{
+	width: 400px;
+	height: 35px;
+	background-color: #fff;
+	/* display: inline-block; */
+	line-height: 35px;
+	font-family: "微软雅黑";
+}
+footer button{
+	width: 80px;
+	height: 35px;
+	background-color: #707278;
+	color: #fff;
+/* 	font-family: "微软雅黑"; */
+	border: none;
+	display: inline-block;
+	padding: 0;
+/* 	vertical-align: top; */
+	line-height: 35px;
+	letter-spacing: 10px;
+	text-indent: 10px;
+	font-family: "微软雅黑";
+}
+footer>div>div{
+	margin:20px 0;
+}
+footer>div>div>i{
+	width: 50px;
+}
+footer>div:last-child>a{
+	float: right;
+	color: #fff;
+}
+/*footer结束*/
