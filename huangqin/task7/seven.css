@@ -6,7 +6,7 @@
  * @version $Id$
  */
 body{
-	min-width: 1280px;
+	min-width: 1100px;
 	margin:auto;
 }
 nav,section,footer{
@@ -17,10 +17,8 @@ nav,section,footer{
 }
 /*nav开始*/
 nav{
-/* 	 width: 100%;  */
 /*为什么加了100%会出现滚动条*/
 	height: 50px;
-/* 	background-color: #ccc; */
 	padding: 0 50px 0 50px;
 	display: flex;
 	display: -webkit-flex;
@@ -45,6 +43,9 @@ nav>ul,nav>div{
 	box-sizing: -moz-border-box;
 	box-sizing: -o-border-box;
 }
+nav>div:nth-of-type(1){
+	font-size: 20px;
+}
 nav>div:nth-of-type(3){
     width: 70px;
 	font-size: 14px;
@@ -65,17 +66,20 @@ nav>ul>li{
 	color: #4D4D4D;
 	width: 100px;
 }
+nav>ul>li>a{
+	color: #a1a1a1;
+}
 nav>ul>li>a:hover{
 	display: inline-block;
 	height: 47px;
 	border-bottom: 3px solid #eb4f38;
+	color: #eb4f38;
 }
 .fill{
 	flex:1;
 	-webkit-flex:1;
 	-moz-flex:1;
 	-o-flex:1;
-/* 	background-color: #eb4f38; */
 }
 /*nav结束*/
 /*part-01开始*/
@@ -111,23 +115,34 @@ nav>ul>li>a:hover{
 .part-01 .title>div{
 	width: 350px;
 	height: 60px;
-	background-color: #eb4f38;
 	line-height: 60px;
 	text-align: center;
 	font-size: 30px;
 	margin-top: 40px;
+}
+.part-01 .title>div>a,.part-04>div>div:last-child>a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+	background-color: #eb4f38;
+}
+.part-01 .title>div>a:hover{
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #eb4f38;
+	background-color: #FFF;
+	transition: background-color 0.35s linear;
 }
 /*part-01结束*/
 /*part-02开始*/
 .part-02{
 	height: 250px;
 	width: 100%;
-	/* padding: 50px; */
 	font-size: 14px;
-
 }
 .part-02 .content{
-/* 	width: 100%; */
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -142,14 +157,12 @@ nav>ul>li>a:hover{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-o-box-sizing: border-box;
-
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
 	-moz-transform: translateY(-50%);
 	-o-transform: translateY(-50%);
-
 }
 .part-02 .content>li>img{
 	padding-bottom: 50px;
@@ -189,8 +202,9 @@ nav>ul>li>a:hover{
 /*part-04开始*/
 .part-04{
 	width: 100%;
-	height: 340px;
+	height: 320px;
 	background-image: url("images/8.png");
+	background-size: cover;
 	text-align:center;
 	color: #fff;
 }
@@ -212,22 +226,74 @@ nav>ul>li>a:hover{
 	font-size: 12px;
 	line-height: 45px;
 }
+
 .part-04>div>div{
-	width: 200px;
+	width: 17%;
 	height: 25px;
 /* 	background-color: #fff; */
 	display: inline-block;
-	border: 1px solid  #eb4f38;
+	color: #a1a1a1;
 	line-height: 25px;
 	text-align: left;
+	vertical-align: top;
+	margin: 40px 30px 0 0;
 	overflow: hidden;
+	background:  #FFF url("images/xiangxia.svg") no-repeat center right;
+	background-size: 25px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+}
+.part-04>div>div>span{
+	display: inline-block;
+	padding-left: 10px;
+}
+.part-04>div>div>ul{
+	width: 100%;
+	background-color: #E3E3E5;
+	color: #7C7A7A;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+}
+.part-04>div>div>ul>li{
+	width: 100%;
+	height: 25px;
+	line-height: 25px;
+	vertical-align: middle;
+}
+.part-04>div>div>ul>li>span:before{
+	content: url("images/dagou.png");
+	visibility: hidden;
+	padding: 10px ;
+}
+.part-04>div>div>ul>li:hover>span:before{
+	visibility: visible;
+}
+.part-04>div>div>ul:hover{
+	border: 1px solid  #eb4f38;
+}
+.part-04>div>div>ul>li:hover{
+	background-color:  #eb4f38;
+	color: #FFF;	
+}
+.part-04>div>div:hover{
+	overflow: visible;
+	border: 1px solid  #eb4f38;
+	border-bottom: 0;
+}
+.part-04>div>div:last-child{
+	text-align: center;
+	background: #eb4f38;
+	color: #FFF;
 }
 /*part-04结束*/
 /*part-05开始*/
 .part-05{
 	width: 100%;
 	background-color: #f8f8f8;
-
 }
 .part-05 .content{
 	width: 80%;
@@ -243,7 +309,6 @@ nav>ul>li>a:hover{
 	display: inline-block;
 	height: 200px;
 	width: 24%;
-
 }
 .part-05 .content>div>img{
 	border: 1px solid #ccc;
@@ -277,18 +342,35 @@ nav>ul>li>a:hover{
 	-moz-display: flex;
 	-o-display: flex;
 }
-
 .part-06>div:first-child{
 	width: 66%;
 	height: 567px;
 	background-image: url("images/13.png");
 	background-size: cover;
+	position: relative;
+}
+.part-06>div:first-child .triangle{
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-right: 30px solid #FFF;
+	border-bottom: 20px solid transparent;
+	border-left: 20px solid transparent;
+	/*绘制一个正方形，里面的宽高为0，然后四条边分开写，要留住哪个方向就把其他的三个边设置为透明的就行*/
 }
 .part-06>div:last-child{
 	width: 33%;
 	margin: auto;
 	line-height: 40px;
 	text-align: center;
+	padding: 0 5%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
 }
 .part-06>div:first-child>div{
 	margin: auto;/*要想margin有效，该块状元素必须要有宽度*/
@@ -308,9 +390,59 @@ nav>ul>li>a:hover{
 	line-height: 130px;
 	height: 160px;
 }
-.part-06>div:first-child>div>p:nth-of-type(n+3){
+.part-06>div:first-child>div>p:nth-of-type(n+3){/*从三开始的后面所有匹配的元素*/
 	font-size: 21px;
 	line-height: 42px;
+}
+.part-06>div:last-child span{
+	font-size: 21px;
+	vertical-align: middle;
+}
+.part-06>div:last-child>span:nth-of-type(2){
+	content: url("images/menu.svg");
+	width: 22px;
+	height: 22px;
+}
+.part-06>div:last-child>span:nth-of-type(3){
+	color: #eb4f38;
+	font-weight: bold;
+}
+.part-06>div:last-child p{
+	font-size: 12px;
+	text-align: left;
+	opacity: 0.5;
+}
+.part-06>div:last-child div:nth-of-type(1){
+	width: 30%;
+	border:1px solid #eb4f38;
+	margin: 30px auto;
+}
+.part-06>div:last-child div:nth-of-type(1) a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #eb4f38;
+	background-color: #FFF;
+	transition: background-color 0.35s linear,color 0.35s linear;
+}
+.part-06>div:last-child div:nth-of-type(1) a:hover{
+	background-color: #eb4f38;
+	color: #FFF;
+	
+}
+.part-06>div:last-child ul li{
+	width: 10px;
+	height: 10px;
+	border: 1px solid #a1a1a1;
+	display: inline-block;
+	margin-right: 20px;
+	border-radius: 50%;
+}
+.part-06>div:last-child ul li:hover{
+	background: #a1a1a1;
+}
+.part-06>div:last-child ul li:last-child{
+	margin-right: 0;
 }
 /*part-06结束*/
 /*part-07开始*/
@@ -330,7 +462,7 @@ nav>ul>li>a:hover{
 	width: 33%;
 	height: 500px;
 	display: inline-block;
-
+	position: relative;
 }
 .part-07>div>div{
 	margin: auto;
@@ -343,7 +475,6 @@ nav>ul>li>a:hover{
 .part-07>div>div>span{
 	width: 30px;
 	height: 2px;
-	
 	display: inline-block;
 }
 .part-07>div:first-child>div>span{
@@ -367,6 +498,18 @@ nav>ul>li>a:hover{
 .part-07>div:first-child>div>div:hover{
 	background-color: #fff;
 	color: #e74f4d;
+}
+.part-07>div:nth-of-type(2) div.triangle{
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 50%;
+	right: -50px;
+	z-index: 2;
+	border-top: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-left: 30px solid #FFF;
 }
 .part-07>div:nth-of-type(2)>div>div{
 	border: 1px solid #e74f4d;
@@ -410,7 +553,6 @@ nav>ul>li>a:hover{
 }
 .part-08>div>p:nth-of-type(2){
 	color: #aaa;
-
 }
 .part-08>div>span{
 	width: 30px;
@@ -419,13 +561,89 @@ nav>ul>li>a:hover{
 	background-color: #e74f4d;
 	display: inline-block;
 }
-.part-08>div>aside,.part-08>form{
+.part-08>div>aside,.part-08 div form{
 	display: inline-block;
+	margin: 70px 0 50px 0px;
+	line-height: 20px;
+}
+.part-08 div aside{
+	width: 30%;
+}
+.part-08 div aside div p{
+	height: 40px;
+	overflow: hidden;
+	opacity: 0.5;
+	font-size: 12px;
+}
+.part-08 div aside div,.part-08 div aside div h4{
+	padding-bottom: 20px;
+}
+.part-08 div aside div a:before{
+	content: url("images/svg.svg");
+	width: 14px;
+	height: 14px;
+	display: inline-block;
+	padding: 0 7px;
+	vertical-align: middle;
+}
+.part-08 div aside div a{
+	float: right;	
+}
+.part-08 div aside div a:hover{
+	color: #eb4f38;
+}
+.part-08 div form{
+	width: 69%;
+	padding-left: 70px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+}
+.part-08 div form div{
+	background: #EDECEC;
+	margin-bottom: 10px;
+	display: inline-block;
+	margin-right: 2%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+}
+.part-08 div form div input,.part-08 div form div textarea{
+	border: 0;
+	background: transparent;
+	margin-left: 10px;
+}
+.part-08 div form div textarea{
+	margin-top: 5px;
+}
+.part-08 div form div:nth-of-type(-n+4){
+	width: 47%;
+	height: 30px;
+	line-height: 30px;	
+}
+.part-08 div form div:nth-of-type(n+5){
+	width: 97%;
+}
+.part-08 div form div:nth-of-type(5){
+	height: 100px;
+}
+.part-08 div form div:nth-of-type(6) a{
+	display: block;
+	width: 100%;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	color: #000;
+}
+.part-08 div form div:nth-of-type(6) a:hover{
+	background: #a1a1a1;
+	color: #eb4f38;
 }
 /*part-08结束*/
 /*footer开始*/
 footer{
-/* 	width: 100%; */
 	background-color: #32353e;	
 	min-height: 400px;
 	position: relative;
@@ -461,7 +679,6 @@ footer input{
 	width: 400px;
 	height: 35px;
 	background-color: #fff;
-	/* display: inline-block; */
 	line-height: 35px;
 	font-family: "微软雅黑";
 }
@@ -470,11 +687,9 @@ footer button{
 	height: 35px;
 	background-color: #707278;
 	color: #fff;
-/* 	font-family: "微软雅黑"; */
 	border: none;
 	display: inline-block;
 	padding: 0;
-/* 	vertical-align: top; */
 	line-height: 35px;
 	letter-spacing: 10px;
 	text-indent: 10px;
@@ -483,8 +698,12 @@ footer button{
 footer>div>div{
 	margin:20px 0;
 }
-footer>div>div>i{
+footer>div>div>a>i{
 	width: 50px;
+	color: #FFF;
+}
+footer>div>div>a>i:hover{
+	color: #eb4f38;
 }
 footer>div:last-child>a{
 	float: right;
